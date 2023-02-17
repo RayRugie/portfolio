@@ -2,22 +2,20 @@ import React from 'react'
 import Lottie from 'lottie-react'
 
 const Service = ({ service }) => {
-  const {id, serviceName, animation} = service;
+  const {serviceName, animation} = service;
   return (
-    <div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+    <div classname="">
+        <div className="h-[380px] card w-[96%]  bg-base-100 shadow-xl hover:border-2 hover:border-red-600 relative">
   <figure className="px-10 pt-10">
-  <Lottie animationData={animation} loop={true} />
+  <Lottie className='w-3/4' animationData={animation} loop={true} />
   </figure>
-  <div className="card-body items-center text-center">
+  <div className="card-body items-center text-center absolute bottom-0 mb-5">
     <h2 className="card-title">{serviceName}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
+    
     </div>
   </div>
 </div>
-    </div>
+   
   )
 }
 
